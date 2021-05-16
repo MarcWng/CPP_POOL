@@ -1,0 +1,35 @@
+/*
+** EPITECH PROJECT, 2020
+** B-CPP-300-PAR-3-3-CPPD14M-marc.wang
+** File description:
+** LittleHand.cpp
+*/
+
+#include "LittleHand.hpp"
+
+LittleHand::LittleHand()
+{
+}
+
+LittleHand::~LittleHand()
+{
+}
+
+void LittleHand::sortFruitBox(FruitBox &unsorted, FruitBox &lemons, FruitBox &bananas, FruitBox &limes)
+{
+    const struct FruitNode *tmp = unsorted.head();
+    int i = 0;
+
+    if (unsorted.head() == NULL)
+        return;
+    while (tmp != NULL && i != unsorted.nbFruits()) {
+        if (tmp->fruit->getName().compare("lime") == 0 && limes.getSize() != limes.nbFruits())
+            limes.putFruit(unsorted.pickFruit());
+        if (tmp->fruit->getName().compare("lemon") == 0 && lemons.getSize() != lemons.nbFruits())
+            lemons.putFruit(unsorted.pickFruit());
+        if (tmp->fruit->getName().compare("banana") == 0 && bananas.getSize() != bananas.nbFruits())
+            bananas.putFruit(unsorted.pickFruit());
+        tmp = tmp->next;
+        i++;
+    }
+}
