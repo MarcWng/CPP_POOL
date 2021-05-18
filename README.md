@@ -1,6 +1,8 @@
 ## General info
 
-Epitech CPP Pool 
+Epitech CPP Pool
+
+Note obtenue : Grade A
 
 ## Setup
 To run a project, just use
