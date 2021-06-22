@@ -5,7 +5,7 @@ Epitech CPP Pool
 Note obtenue : Grade A
 
 ## Setup
-To run a project, just use
+Compilation avec un Makefile
 ```sh
 make re
 ```
